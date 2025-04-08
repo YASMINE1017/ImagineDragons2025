@@ -4,103 +4,103 @@ body {
     padding: 0;
     font-family: "Helvetica Neue", sans-serif;
     background-color: #fafafa;
-  }
-  
-  /* 页面主布局：左右排 */
-  .main-layout {
+}
+
+/* 页面主布局：左右排 */
+.main-layout {
     display: flex;
     flex-direction: row;
     height: 100vh;
-  }
-  
-  /* 左边图片区域 */
-  .left-image {
+}
+
+/* 左边图片区域 */
+.left-image {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #f2f2f2;
     overflow: hidden;
-  }
-  
-  .left-image img {
+}
+
+.left-image img {
     width: 90%;
     height: auto;
     max-width: 500px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* 右边内容区域 */
-  .right-content {
+}
+
+/* 右边内容区域 */
+.right-content {
     flex: 1;
     padding: 60px 40px;
     background-color: #ffffff;
     overflow-y: auto;
-  }
-  
-  .right-content h1 {
+}
+
+.right-content h1 {
     color: #333;
     margin-bottom: 30px;
     text-align: center;
     font-size: 28px;
-  }
-  
-  /* 九宫格专辑区域 */
-  .album-grid {
+}
+
+/* 九宫格专辑区域 */
+.album-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     padding: 0 20px;
     justify-items: center;
     align-items: start;
-  }
-  
-  .album-card {
+}
+
+.album-card {
     text-align: center;
     text-decoration: none;
     color: #333;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .album-card img {
+}
+
+.album-card img {
     width: 140px;
     height: 140px;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .album-title {
+}
+
+.album-title {
     margin-top: 10px;
     font-size: 16px;
     font-weight: bold;
-  }
-  
-  .album-card:hover {
+}
+
+.album-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-  }
-  
-  /* 歌词页预格式样式 */
-  pre {
+}
+
+/* 歌词页预格式样式 */
+pre {
     background: #f8f8f8;
     padding: 15px;
     white-space: pre-wrap;
     font-size: 16px;
     line-height: 1.6;
     border-radius: 6px;
-  }
-  
-  /* 高亮样式 */
+}
+
+/* 高亮样式 */
 .highlight {
     color: #e91e63; /* 玫红色 */
     font-weight: bold;
-  }
+}
 
-  /* ✅ 移动端适配 */
-  @media (max-width: 768px) {
+/* ✅ 移动端适配 */
+@media (max-width: 768px) {
     .main-layout {
         flex-direction: column;
         height: auto;
@@ -129,13 +129,19 @@ body {
     }
 
     .album-grid {
-        grid-template-columns: repeat(3, 1fr);  /* 使专辑在手机端也显示成九宫格 */
-        gap: 20px;
+        grid-template-columns: repeat(3, 1fr); /* 三列显示 */
+        gap: 15px;
+        padding: 0 10px;
     }
 
     .album-card img {
-        width: 100%;
-        height: auto;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    .album-title {
+        font-size: 14px;
     }
 
     .center-title {
@@ -143,4 +149,47 @@ body {
         margin-bottom: 20px;
         font-weight: bold;
     }
+
+    /* 返回按钮 */
+    .back-to-home {
+        margin-top: 30px;
+        text-align: center;
+    }
+    
+    .back-to-home a {
+        display: inline-block;
+        font-size: 22px;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #ff4b2b; /* 红色背景 */
+        padding: 14px 30px;
+        border-radius: 50px; /* 圆角按钮 */
+        text-decoration: none;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* 按钮阴影效果 */
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* 动画效果 */
+    }
+    
+    .back-to-home a:hover {
+        background-color: #e84325; /* 更深的红色 */
+        transform: translateY(-5px); /* 向上浮动效果 */
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); /* 更强的阴影效果 */
+    }
+
+    .back-to-home a:active {
+        transform: translateY(0); /* 点击时恢复原位 */
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* 轻微阴影效果 */
+    }
+
+    /* 歌曲标题 */
+    .song-title {
+        text-align: center;
+        font-size: 28px;
+        margin: 30px 0;
+        color: #333;
+    }
+
+    .highlight {
+        background-color: yellow;
+        font-weight: bold;
+    }      
 }
