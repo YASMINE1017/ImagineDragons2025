@@ -129,19 +129,13 @@ pre {
     }
 
     .album-grid {
-        grid-template-columns: repeat(3, 1fr); /* 三列显示 */
-        gap: 15px;
-        padding: 0 10px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
     .album-card img {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-    }
-
-    .album-title {
-        font-size: 14px;
+        width: 100%;
+        height: auto;
     }
 
     .center-title {
@@ -149,47 +143,4 @@ pre {
         margin-bottom: 20px;
         font-weight: bold;
     }
-
-    /* 返回按钮 */
-    .back-to-home {
-        margin-top: 30px;
-        text-align: center;
-    }
-    
-    .back-to-home a {
-        display: inline-block;
-        font-size: 22px;
-        font-weight: bold;
-        color: #ffffff;
-        background-color: #ff4b2b; /* 红色背景 */
-        padding: 14px 30px;
-        border-radius: 50px; /* 圆角按钮 */
-        text-decoration: none;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* 按钮阴影效果 */
-        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* 动画效果 */
-    }
-    
-    .back-to-home a:hover {
-        background-color: #e84325; /* 更深的红色 */
-        transform: translateY(-5px); /* 向上浮动效果 */
-        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); /* 更强的阴影效果 */
-    }
-
-    .back-to-home a:active {
-        transform: translateY(0); /* 点击时恢复原位 */
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* 轻微阴影效果 */
-    }
-
-    /* 歌曲标题 */
-    .song-title {
-        text-align: center;
-        font-size: 28px;
-        margin: 30px 0;
-        color: #333;
-    }
-
-    .highlight {
-        background-color: yellow;
-        font-weight: bold;
-    }      
 }
