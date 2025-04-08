@@ -102,46 +102,45 @@ body {
   /* ✅ 移动端适配 */
   @media (max-width: 768px) {
     .main-layout {
-      flex-direction: column;
-      height: auto;
+        flex-direction: column;
+        height: auto;
     }
-  
+
     .left-image,
     .right-content {
-      flex: none;
-      width: 100%;
+        flex: none;
+        width: 100%;
     }
-  
+
     .left-image {
-      padding: 20px;
+        padding: 20px;
     }
-  
+
     .left-image img {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      border-radius: 0;
-      box-shadow: none;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 0;
+        box-shadow: none;
     }
-  
+
     .right-content {
-      padding: 30px 20px;
+        padding: 30px 20px;
     }
-  
+
     .album-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+        grid-template-columns: repeat(3, 1fr);  /* 使专辑在手机端也显示成九宫格 */
+        gap: 20px;
     }
-  
+
     .album-card img {
-      width: 100%;
-      height: auto;
+        width: 100%;
+        height: auto;
     }
-    
+
     .center-title {
         text-align: center;
         margin-bottom: 20px;
         font-weight: bold;
-      }
-      
-  }
+    }
+}
