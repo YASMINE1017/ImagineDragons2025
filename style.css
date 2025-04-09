@@ -8,7 +8,7 @@ body {
     text-align: center;
 }
 
-/* 页面主布局：左右排（默认大屏） */
+/* 页面主布局：默认左右排 */
 .main-layout {
     display: flex;
     flex-direction: row;
@@ -116,7 +116,7 @@ body {
 
 /* ✅ 移动端适配 */
 @media (max-width: 768px) {
-    /* 主布局纵向排列：封面在上、专辑在下 */
+    /* 主布局变上下排列 */
     .main-layout {
         flex-direction: column;
         height: auto;
@@ -138,7 +138,6 @@ body {
         padding: 30px 15px;
     }
 
-    /* 歌词页字体适配 */
     .song-title {
         font-size: 24px;
     }
@@ -154,14 +153,7 @@ body {
         font-size: 16px;
     }
 
-    /* 每行专辑布局变成纵向一列居中 */
-    .album-row {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        margin-bottom: 30px;
-    }
-
+    /* 不改变 album-row 布局，仍保持一行两个 */
     .album-card img {
         width: 120px;
         height: 120px;
