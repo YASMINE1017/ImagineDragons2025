@@ -5,10 +5,10 @@ body {
     font-family: "Helvetica Neue", sans-serif;
     background-color: #fafafa;
     color: #333;
-    text-align: center; /* 全局文本居中 */
+    text-align: center;
 }
 
-/* 页面主布局：左右排 */
+/* 页面主布局：左右排（默认大屏） */
 .main-layout {
     display: flex;
     flex-direction: row;
@@ -100,38 +100,68 @@ body {
 
 /* 歌词容器 */
 .lyrics {
-    text-align: center; /* 歌词内容居中 */
-    font-size: 18px; /* 默认字体大小 */
-    line-height: 1.8; /* 行间距 */
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
     margin: 0 auto;
     padding: 20px;
-    max-width: 800px; /* 设置最大宽度，确保大屏显示合适 */
+    max-width: 800px;
 }
 
 /* 高亮样式 */
 .highlight {
-    color: #e91e63; /* 玫红色字体 */
+    color: #e91e63;
     font-weight: bold;
 }
 
 /* ✅ 移动端适配 */
 @media (max-width: 768px) {
+    /* 主布局纵向排列：封面在上、专辑在下 */
+    .main-layout {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-image {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .left-image img {
+        width: 100%;
+        max-width: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .right-content {
+        padding: 30px 15px;
+    }
+
+    /* 歌词页字体适配 */
     .song-title {
-        font-size: 24px; /* 移动端歌名字体大小 */
+        font-size: 24px;
     }
 
     .lyrics {
-        font-size: 16px; /* 移动端字体适配 */
-        line-height: 1.6; /* 行间距调整 */
+        font-size: 16px;
+        line-height: 1.6;
         padding: 15px;
-        max-width: 95%; /* 更小的最大宽度，适合手机 */
+        max-width: 95%;
     }
 
     .highlight {
-        font-size: 16px; /* 移动端高亮字体大小 */
+        font-size: 16px;
     }
 
-    /* 专辑卡片样式调整为手机适应 */
+    /* 每行专辑布局变成纵向一列居中 */
+    .album-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
     .album-card img {
         width: 120px;
         height: 120px;
